@@ -145,9 +145,7 @@ public class Email {
                 return false;
         } else if (!mailTextOnly.equals(other.mailTextOnly))
             return false;
-        if (Double.doubleToLongBits(mailTimestamp) != Double.doubleToLongBits(other.mailTimestamp))
-            return false;
-        return true;
+        return Double.doubleToLongBits(mailTimestamp) == Double.doubleToLongBits(other.mailTimestamp);
     }
 
     @Override

@@ -5,13 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by ashavlovskyi on 7/22/17.
+/*
+  Created by ashavlovskyi on 7/22/17.
+  Page objects for Rozetka Sign Up page
  */
 public class SignupPage {
-    By usernameLocator = By.name("title");
-    By emailLocator = By.name("email");
-    By passwordLocator = By.name("password");
+    private By usernameLocator = By.name("title");
+    private By emailLocator = By.name("email");
+    private By passwordLocator = By.name("password");
 
     private final WebDriver driver;
 
@@ -23,7 +24,7 @@ public class SignupPage {
         }
     }
 
-    public SignupPage  typeUsername(String username) {
+    public SignupPage typeUsername(String username) {
         driver.findElement(usernameLocator).sendKeys(username);
         return this;
     }
@@ -33,7 +34,7 @@ public class SignupPage {
         return this;
     }
 
-    public SignupPage  typePassword(String password) {
+    public SignupPage typePassword(String password) {
         driver.findElement(passwordLocator).sendKeys(password);
         return this;
     }
